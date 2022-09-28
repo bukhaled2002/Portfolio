@@ -46,6 +46,11 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 390px) {
   .container {
+    width: 30px;
+  }
+}
+@media (min-width: 390px) {
+  .container {
     width: 320px;
   }
 }
