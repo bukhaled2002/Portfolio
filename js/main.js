@@ -16,3 +16,10 @@ const links = document.querySelector(".header .links");
 icon.onclick = () => {
   links.classList.toggle("active");
 };
+
+//testimonials spin
+// let current = 1,
+//   numOfShow = 3;
+
+// const testimonials = document.querySelectorAll(".testimonials .zoom-box");
+// for (let i = 0; i < current * numOfShow; i++) {}
