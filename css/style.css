@@ -311,6 +311,11 @@ button::after {
 }
 .about .img {
   width: 40%;
+  transform: translate(-170%);
+  transition: 0.5s;
+}
+.about .img.on-scroll {
+  transform: translate(0);
 }
 .about .img img {
   width: 300px;
@@ -473,12 +478,13 @@ button::after {
   overflow: hidden;
 }
 .skills .container .skills-boxes .box .progress span {
-  width: 50%;
   height: 100%;
+  width: 0;
   position: absolute;
   left: 0;
   top: 0;
   background-color: var(--main-color);
+  transition: 0.4s;
 }
 @media (max-width: 1170px) {
   .skills .container {

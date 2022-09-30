@@ -1,3 +1,10 @@
+const skills = document.querySelectorAll(".skills-boxes .progress span");
+
+const skillsSection = document.querySelector(".skills");
+const skillbox = document.querySelectorAll(".skills-boxes .box>span");
+const aboutSection = document.querySelector(".about");
+const aboutImg = document.querySelector(".about .img");
+window.onscroll = function () {};
 //header
 const header = document.querySelector(".header");
 const navigation = document.querySelectorAll(".header .links li a");
@@ -9,6 +16,20 @@ window.onscroll = () => {
   } else {
     header.classList.remove("onScroll");
     // console.log(window.pageYOffset > 75);
+  }
+  if (window.scrollY >= skillsSection.offsetTop - 250) {
+    skills.forEach((skill) => {
+      console.log(skill.dataset.progress);
+      skill.style.width = skill.dataset.progress;
+      skill.parentElement.parentElement.dataset.progress;
+    });
+  } else {
+    skills.forEach((skill) => {
+      skill.style.width = 0;
+    });
+  }
+  if (window.scrollY >= aboutSection.offsetTop - 250) {
+    aboutImg.classList.add("on-scroll");
   }
 };
 //links toggle
@@ -40,12 +61,7 @@ function scrollto(elements) {
 }
 scrollto(navigation);
 //skills box navigate
-const skills = document.querySelectorAll(".skills-boxes .progress span");
-const skillbox = document.querySelectorAll(".skills-boxes .box>span");
-skills.forEach((skill) => {
-  skill.style.width = skill.parentElement.parentElement.dataset.progress;
-  skill.parentElement.parentElement.dataset.progress;
-});
+
 //gallery
 let gallery = document.querySelector(".gallery");
 let pictures = document.querySelectorAll(".gallery .container > div");
