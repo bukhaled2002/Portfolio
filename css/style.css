@@ -103,10 +103,7 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.header .icon:hover,
-.header .icon.active {
-  color: var(--main-color);
-}
+
 .header .icon.active i::before {
   content: "X";
 }
@@ -207,7 +204,7 @@
   position: relative;
   width: 100%;
 }
-.overlay {
+.landing .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -550,6 +547,120 @@ button::after {
   margin-bottom: 10px;
 }
 /* end testimonials */
+/* start gallery  */
+.gallery {
+  padding: 60px 0;
+}
+.gallery .main-header h3::after {
+  content: "my old work";
+  background-color: rgb(255, 255, 255);
+}
+.gallery .container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.gallery .container > div {
+  flex-basis: calc((100% - 30px) / 3);
+  border: rgb(210, 210, 210) solid 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery .container > div img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.gallery .container > div:hover img {
+  rotate: 5deg;
+  scale: 1.2;
+}
+.gallery span {
+  background-color: var(--main-color);
+  padding: 8px;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  width: 120px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.gallery .overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: unset;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.522);
+}
+.gallery .popup-box {
+  z-index: 1001;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 52%;
+  height: 64%;
+  padding: 10px 20px;
+  display: flex;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  justify-content: center;
+  align-content: center;
+}
+.gallery .popup-box .close {
+  position: absolute;
+  top: -22px;
+  right: -10px;
+  border-radius: 10px;
+  background-color: red;
+  height: 35px;
+  content: "X";
+  width: 35px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.gallery .popup-box > img {
+  /* max-width: 100%; */
+  width: 85%;
+  height: 86%;
+  margin-top: 30px;
+  object-fit: contain;
+}
+@media (max-width: 560px) {
+  .gallery .popup-box {
+    height: 60%;
+  }
+}
+@media (max-width: 390px) {
+  .gallery .popup-box {
+    width: 80%;
+    height: 30%;
+  }
+}
+@media (max-width: 992px) {
+  .gallery .popup-box {
+    width: 80%;
+  }
+  .gallery .container > div {
+    flex-basis: calc((100% - 15px) / 2);
+  }
+  .gallery .container > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 767px) {
+  .gallery .container > div {
+    flex-basis: 100%;
+  }
+}
+
+/* end gallery  */
 /* start contact */
 .contact {
   padding: 60px 0;

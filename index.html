@@ -23,12 +23,13 @@
           <div>Portfo<span>lio</span></div>
         </div>
         <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" data-nav=".home">Home</a></li>
+          <li><a href="#" data-nav=".about">About</a></li>
+          <li><a href="#" data-nav=".services">Services</a></li>
+          <li><a href="#" data-nav=".skills">Skills</a></li>
+          <li><a href="#" data-nav=".testimonials">Testimonials</a></li>
+          <li><a href="#" data-nav=".gallery">Gallery</a></li>
+          <li><a href="#" data-nav=".contact">Contact</a></li>
         </ul>
         <div class="icon"><i class="fa-solid fa-bars"></i></div>
       </div>
@@ -47,7 +48,7 @@
     </div>
     <!-- end landing page -->
     <!-- start about  -->
-    <div class="about">
+    <div class="about" data-nav=".about">
       <div class="main-header">
         <h3>About Me</h3>
       </div>
@@ -70,7 +71,7 @@
     </div>
     <!-- end about  -->
     <!-- start services  -->
-    <div class="services">
+    <div class="services" data-nav=".services">
       <div class="main-header">
         <h3>My Services</h3>
       </div>
@@ -109,7 +110,7 @@
     </div>
     <!-- end services  -->
     <!-- start skills  -->
-    <div class="skills">
+    <div class="skills" data-nav=".skills">
       <div class="main-header">
         <h3>My Skills</h3>
       </div>
@@ -126,34 +127,36 @@
           <button class="special-button">Read More</button>
         </div>
         <div class="skills-boxes">
-          <div class="box">
+          <div class="box" data-progress="90%">
             <h4>HTML</h4>
-            <span>50%</span>
+            <span></span>
             <div class="progress"><span></span></div>
           </div>
-          <div class="box">
+          <div class="box" data-progress="90%">
             <h4>CSS</h4>
-            <span>50%</span>
+            <span></span>
             <div class="progress"><span></span></div>
           </div>
-          <div class="box">
+          <div class="box" data-progress="70%">
             <h4>JavaScript</h4>
-            <span>50%</span>
-            <div class="progress"><span></span></div>
+            <span></span>
+            <div class="progress">
+              <span> </span>
+            </div>
           </div>
-          <div class="box">
+          <div class="box" data-progress="50%">
             <h4>React</h4>
-            <span>50%</span>
+            <span></span>
             <div class="progress"><span></span></div>
           </div>
-          <div class="box">
+          <div class="box" data-progress="50%">
             <h4>BootStrap</h4>
-            <span>50%</span>
+            <span></span>
             <div class="progress"><span></span></div>
           </div>
-          <div class="box">
+          <div class="box" data-progress="80%">
             <h4>Photoshop</h4>
-            <span>50%</span>
+            <span></span>
             <div class="progress"><span></span></div>
           </div>
         </div>
@@ -161,7 +164,7 @@
     </div>
     <!-- end skills  -->
     <!-- start testimonials  -->
-    <div class="testimonials">
+    <div class="testimonials" data-nav=".testimonials">
       <div class="main-header">
         <h3>Testimonials</h3>
       </div>
@@ -211,8 +214,36 @@
       </div>
     </div>
     <!-- end testimonials  -->
+    <!-- start gallery -->
+    <div class="gallery">
+      <div class="main-header">
+        <h3>Gallery</h3>
+      </div>
+      <div class="container">
+        <div class="zoom-box">
+          <img src="images/Almadfa3.jpg" alt="Mamdouh Nasrallah" />
+        </div>
+        <div class="zoom-box">
+          <img src="images/MM.jpg" alt="Marwan Mousa" />
+        </div>
+        <div class="zoom-box">
+          <img src="images/pablo.jpg" alt="Marwan Pablo" />
+        </div>
+        <div class="zoom-box">
+          <img src="images/Austin-Dunham.jpg" alt="Austin Dunham" />
+        </div>
+        <div class="zoom-box">
+          <img src="images/Amir-Eid.png" alt="Amir Eid" />
+        </div>
+        <div class="zoom-box">
+          <img src="images/Ahmed-Kamel.jpg" alt="Ahmed Kamel" />
+        </div>
+      </div>
+      <span>Show more</span>
+    </div>
+    <!-- end gallery -->
     <!-- start Contact  -->
-    <div class="contact">
+    <div class="contact" data-nav=".contact">
       <div class="main-header">
         <h3>Contace me</h3>
       </div>
